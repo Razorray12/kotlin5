@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentVIew">
+
+    <fragment
+        android:id="@+id/fragmentVIew"
+        android:name="com.example.kotlin5.FragmentVIew"
+        android:label="fragment_v_iew"
+        tools:layout="@layout/fragment_v_iew" >
+        <action
+            android:id="@+id/action_fragmentVIew_to_fragmentSQL"
+            app:destination="@id/fragmentSQL" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSQL"
+        android:name="com.example.kotlin5.FragmentSQL"
+        android:label="fragment_s_q_l"
+        tools:layout="@layout/fragment_s_q_l" />
+</navigation>
