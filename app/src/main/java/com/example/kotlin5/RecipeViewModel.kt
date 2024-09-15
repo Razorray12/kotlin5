@@ -3,9 +3,12 @@ package com.example.kotlin5
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class RecipeViewModel(private val repository: RecipeRepository) : ViewModel() {
+@HiltViewModel
+class RecipeViewModel @Inject constructor(private val repository: RecipeRepository) : ViewModel() {
 
     val recipes: LiveData<List<Recipe>> = repository.getAllRecipes()
 
